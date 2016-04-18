@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+      <div class="container-fluid">
+      </div>
+         <hr>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <form action="/submit_contact/" method="post">
+                <input name="first_name" id="first_name" placeholder="First Name">
+                <input name="last_name" id="last_name" placeholder="Last Name">
+                <input name="email_address" id="email_address" placeholder="Email Address">
+                <input name="phone_number" id="phone_number" placeholder="Phone Number">
+                <button onclick="submitcontact()">Submit</button>
+                {% csrf_token %}
+              </form>
+           </div>
+          </div>
+{% endblock %}
